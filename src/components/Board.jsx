@@ -4,8 +4,11 @@ import Cells from './Cell'
 import Screen from './Screen'
 import Buttons from './Buttons'
 import Header from './Header'
-// import Sound from 'react-sound'
-// import soundFiles from './sounds/'
+import Sound from 'react-sound'
+import soundFiles from '../sounds/soundOnRun.mp3'
+import soundFiles1 from '../sounds/soundOnBomb.mp3'
+import soundFiles2 from '../sounds/soundOnLeftClick.mp3'
+import soundFiles3 from '../sounds/soundOnRightClick.mp3'
 
 // assign difficulty to a state
 // add sound effects
@@ -92,6 +95,10 @@ const MainGame = () => {
 
   return (
     <>
+    <Sound 
+    url={soundFiles}
+    autoLoad = {true}
+    playStatus={Sound.status.PLAYING}/>
     <Header 
     />
     <Buttons 
@@ -117,6 +124,7 @@ const MainGame = () => {
               leftClick= {() => leftClick(x,y)}
               rightClick = {() => rightClick(x, y)}
              />
+          
               )
             }
           
