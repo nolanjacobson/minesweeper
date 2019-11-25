@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
-
-class App extends Component {
-  render() {
-    return <HelloWorld />
-  }
+import React from 'react';
+import MainGame from './components/Board'
+import Header from './components/Header'
+import Buttons from './components/Buttons'
+const App = () => {
+  return (
+    <>
+    <MainGame />
+   </>
+  )
 }
 
-export default App
+export default App;
