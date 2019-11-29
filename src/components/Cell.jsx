@@ -1,17 +1,20 @@
 import React from 'react';
 
-const Cells = props => {
-  return (
-    <td
-    onClick={props.leftClick}
-    onContextMenu={event => {
-      event.preventDefault()
-      props.rightClick()
-    }}
-    >
-      {props.display}
-    </td>
-  )
+const Cells = prop => {
+   if (prop.data === '*') {
+     return <>💣</>
+   }
+   if (prop.data === 'F') {
+    return <>🚩</>
+  }
+  if (prop.data === '_') {
+    return <>☑️</>
+  }
+  else {
+    return <>{prop.data}</>
+  }
+
+  
 }
 
 export default Cells;

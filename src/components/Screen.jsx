@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-// import Modal from 'react-modal'
-// ? Mark, should I use modal in this instance?
+import React from 'react';
+
+// screen is an extra feature
 
 const Screen = props => {
   return (
     <div className='screen'> 
     <div className='innerScreen'>
-    <h1>{props.result}</h1>  
+    <h1 className="result">{props.result}</h1>  
     <button onClick={props.restartGame}>Restart</button>  
     </div>  
     </div>
